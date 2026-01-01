@@ -87,6 +87,11 @@ Again make sure the results for the selected variants were generated beforehand.
 ## Experiment Results
 Down below we illustrated the official results of our paper. Please note that - although our schema scaler behaves inherently deterministic - the results may vary after rerunning the experiment due to the inherent stochasticity of the LLM. For detailed evaluation results feel free to check out chapter 5 of the paper.
 
+### General Terminology
+ExA = Execution Accuracy
+TE = Token Efficiency (total tokens consumed by LLM per query)
+LE = Latency Efficiency (runtime in seconds per query)
+
 ### Aggregate Analysis
 GPT-5.2 Performance across Variants.
 <table>
@@ -176,6 +181,98 @@ GPT-5.2 Performance across Variants.
       <td>73.21</td>
       <td>53,317</td>
       <td>2.21</td>
+    </tr>
+  </tbody>
+</table>
+
+Llama-3.3-70B Performance across Variants.
+<table>
+  <thead>
+    <tr>
+      <th>Level</th>
+      <th>Variant</th>
+      <th>ExA</th>
+      <th>TE</th>
+      <th>LE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Original</strong></td>
+      <td>spider-dev-0</td>
+      <td>76.21</td>
+      <td>656</td>
+      <td>1.40</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>spider-dev-50</td>
+      <td>76.89</td>
+      <td>3,890</td>
+      <td>0.96</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>spider-dev-100</td>
+      <td>74.56</td>
+      <td>7,287</td>
+      <td>2.39</td>
+    </tr>
+    <tr>
+      <td><strong>Level 1</strong></td>
+      <td>spider-dev-250</td>
+      <td>72.44</td>
+      <td>17,596</td>
+      <td>2.84</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>spider-dev-500</td>
+      <td>70.50</td>
+      <td>35,119</td>
+      <td>3.43</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>spider-dev-800</td>
+      <td>70.21</td>
+      <td>56,472</td>
+      <td>2.19</td>
+    </tr>
+    <tr>
+      <td><strong>Level 2</strong></td>
+      <td>spider-dev-50</td>
+      <td>73.02</td>
+      <td>3,828</td>
+      <td>0.94</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>spider-dev-100</td>
+      <td>72.92</td>
+      <td>6,998</td>
+      <td>0.93</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>spider-dev-250</td>
+      <td>74.66</td>
+      <td>16,744</td>
+      <td>1.51</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>spider-dev-500</td>
+      <td>73.50</td>
+      <td>33,208</td>
+      <td>1.82</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>spider-dev-800</td>
+      <td>71.86</td>
+      <td>52,853</td>
+      <td>2.74</td>
     </tr>
   </tbody>
 </table>
