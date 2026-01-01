@@ -64,7 +64,7 @@ python enlarge_databases.py \
 The newly created datasets are stored in `data/datasets/` and level 2 variants are marked with an `f` suffix. The schema scaler further generates metadata-files - that provide information about table and foreign key counts before and after augmentation - and stores them in `data/metadata/`. The corresponding JSON-files containing the schema representation are stored in `data/schemas/`.
 
 ### Prompt Model
-Now using our augmented versions of spider-dev, we can start prompting the models. In terms of LLMs utilized within this study, one open- (`gpt-5.2` via OpenAI API) and one closed-source (`llama-3.3-70B` via TogetherAI API) LLM were tested, which is common in this field of research. To generate the results in `data/reesults/` run the following command for each variant:
+Now using our augmented versions of spider-dev, we can start prompting the models. In terms of LLMs utilized within this study, one open- (`gpt-5.2` via OpenAI API) and one closed-source (`llama-3.3-70B` via TogetherAI API) LLM were tested, which is common in this field of research. To generate the results in `data/results/` run the following command for each variant:
 ```
 python prompt_model.py \
     --model "gpt-5.2" \
