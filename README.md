@@ -108,14 +108,14 @@ GPT-5.2 Performance across Variants.
       <td>1.21</td>
     </tr>
     <tr>
-      <td></td>
+      <td><strong>Level 1</strong></td>
       <td>spider-dev-50</td>
       <td>74.47</td>
       <td>3,898</td>
       <td>1.45</td>
     </tr>
     <tr>
-      <td></td>
+      <td><strong>Level 1</strong></td>
       <td>spider-dev-100</td>
       <td>74.08</td>
       <td>7,344</td>
@@ -129,14 +129,14 @@ GPT-5.2 Performance across Variants.
       <td>1.57</td>
     </tr>
     <tr>
-      <td></td>
+      <td><strong>Level 1</strong></td>
       <td>spider-dev-500</td>
       <td>74.47</td>
       <td>35,527</td>
       <td>1.88</td>
     </tr>
     <tr>
-      <td></td>
+      <td><strong>Level 1</strong></td>
       <td>spider-dev-800</td>
       <td>73.98</td>
       <td>57,135</td>
@@ -150,28 +150,28 @@ GPT-5.2 Performance across Variants.
       <td>1.55</td>
     </tr>
     <tr>
-      <td></td>
+      <td><strong>Level 2</strong></td>
       <td>spider-dev-100</td>
       <td>73.79</td>
       <td>7,016</td>
       <td>1.69</td>
     </tr>
     <tr>
-      <td></td>
+      <td><strong>Level 2</strong></td>
       <td>spider-dev-250</td>
       <td>74.76</td>
       <td>16,834</td>
       <td>1.88</td>
     </tr>
     <tr>
-      <td></td>
+      <td><strong>Level 2</strong></td>
       <td>spider-dev-500</td>
       <td>73.89</td>
       <td>33,454</td>
       <td>1.93</td>
     </tr>
     <tr>
-      <td></td>
+      <td><strong>Level 2</strong></td>
       <td>spider-dev-800</td>
       <td>73.21</td>
       <td>53,317</td>
