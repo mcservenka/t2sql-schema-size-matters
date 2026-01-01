@@ -34,6 +34,21 @@ python prepare_schema.py
 ```
 
 ### Candidate Name Selection
-Before generating the enlarged schema variants, we first construct a pool of candidate names to be used for synthetic tables and columns. As outlined in the original paper, several configuration parameters can be adjusted to control both the size and the characteristics of this candidate set. In the following, you can find a list of the most influential parameters and their corresponding effects as well as the values we used in our experiment:
-* Similarity Minimum `sim_min`: The minimum of similarity allowed between the schema centroid and a word to be considered domain-related (`sim_min=0.55`).
-* Similarity Maximum `sim_max`: The maximum of similarity allowed between the schema centroid and a word to be considered domain-related but not synonymous (`sim_max=0.25`).
+Before generating the enlarged schema variants, we first construct a pool of candidate names to be used for synthetic tables and columns. As outlined in the original paper, several configuration parameters can be adjusted to control both the size and the characteristics of this candidate set that is selected on predefined, noun-only vocabulary. In the following, you can find a list of the most influential parameters and their corresponding effects as well as the values we used in our experiment:
+* **Similarity Minimum** `sim_min`: The minimum of similarity allowed between the schema centroid and a word to be considered domain-related (`sim_min=0.55`).
+* **Similarity Maximum** `sim_max`: The maximum of similarity allowed between the schema centroid and a word to be considered domain-related but not too close to it's inherit word-space (`sim_max=0.25`).
+* **Similarity Ambiguity** `sim_ambiguity`: The maximum of similarity allowed between a word to any of the original schema names (`sim_ambiguity=0.75`). This ensures that no selected word is synonymous to any schema name.
+* **Candidates Minimum** `min_candidates`: The minimum number of candidate words that should be generated for a single database (`min_candidates=400`).
+* **Candidates Maximum** `max_candidates`: The maximum number of candidate words that should be generated for a single database (`max_candidates=1000`).
+* **Anchor k** `anchor_k`: The number of semantically related nouns used for stabilizing the embedding space in case of small schemas with a narrow semantic representation (`anchor_k=30`).
+
+To generate the candidate words in `data/candidates` you can run:
+```
+python generate_names.py \
+    --sim_min 0.55 \
+    --sim_max 0.25 \
+    --sim_ambiguity 0.75 \
+    --min_candidates 400 \
+    --max_candidates 1000 \
+    --anchor_k 30
+```
