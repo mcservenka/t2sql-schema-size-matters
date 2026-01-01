@@ -121,7 +121,6 @@ GPT-5.2 Performance across Variants.
       <td>7,344</td>
       <td>1.42</td>
     </tr>
-
     <tr>
       <td><strong>Level 1</strong></td>
       <td>spider-dev-250</td>
@@ -143,7 +142,6 @@ GPT-5.2 Performance across Variants.
       <td>57,135</td>
       <td>2.28</td>
     </tr>
-
     <tr>
       <td><strong>Level 2</strong></td>
       <td>spider-dev-50</td>
