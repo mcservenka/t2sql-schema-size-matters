@@ -85,3 +85,99 @@ python evaluate_results.py \
 Again make sure the results for the selected variants were generated beforehand.
 
 ## Experiment Results
+Down below we illustrated the official results of our paper. Please note that - although our schema scaler behaves inherently deterministic - the results may vary after rerunning the experiment due to the inherent stochasticity of the LLM. For detailed evaluation results feel free to check out chapter 5 of the paper.
+
+### Aggregate Analysis
+GPT-5.2 Performance across Variants.
+<table>
+  <thead>
+    <tr>
+      <th>Level</th>
+      <th>Variant</th>
+      <th>ExA</th>
+      <th>TE</th>
+      <th>LE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Original</strong></td>
+      <td>spider-dev-0</td>
+      <td>76.79</td>
+      <td>614</td>
+      <td>1.21</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>spider-dev-50</td>
+      <td>74.47</td>
+      <td>3,898</td>
+      <td>1.45</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>spider-dev-100</td>
+      <td>74.08</td>
+      <td>7,344</td>
+      <td>1.42</td>
+    </tr>
+
+    <tr>
+      <td><strong>Level 1</strong></td>
+      <td>spider-dev-250</td>
+      <td>75.15</td>
+      <td>17,759</td>
+      <td>1.57</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>spider-dev-500</td>
+      <td>74.47</td>
+      <td>35,527</td>
+      <td>1.88</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>spider-dev-800</td>
+      <td>73.98</td>
+      <td>57,135</td>
+      <td>2.28</td>
+    </tr>
+
+    <tr>
+      <td><strong>Level 2</strong></td>
+      <td>spider-dev-50</td>
+      <td>73.60</td>
+      <td>3,818</td>
+      <td>1.55</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>spider-dev-100</td>
+      <td>73.79</td>
+      <td>7,016</td>
+      <td>1.69</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>spider-dev-250</td>
+      <td>74.76</td>
+      <td>16,834</td>
+      <td>1.88</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>spider-dev-500</td>
+      <td>73.89</td>
+      <td>33,454</td>
+      <td>1.93</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>spider-dev-800</td>
+      <td>73.21</td>
+      <td>53,317</td>
+      <td>2.21</td>
+    </tr>
+  </tbody>
+</table>
