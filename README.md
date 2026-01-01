@@ -17,7 +17,7 @@ python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
 ```
-Initially please download the required ressources from nltk using:
+Next please download the required ressources from the `nltk` package using:
 ```
 import nltk
 nltk.download("wordnet")
@@ -33,4 +33,7 @@ First we need to build the schema representation objects of the original Spider 
 python prepare_schema.py
 ```
 
-
+### Candidate Name Selection
+Before generating the enlarged schema variants, we first construct a pool of candidate names to be used for synthetic tables and columns. As outlined in the original paper, several configuration parameters can be adjusted to control both the size and the characteristics of this candidate set. In the following, you can find a list of the most influential parameters and their corresponding effects as well as the values we used in our experiment:
+* Similarity Minimum `sim_min`: The minimum of similarity allowed between the schema centroid and a word to be considered domain-related (`sim_min=0.55`).
+* Similarity Maximum `sim_max`: The maximum of similarity allowed between the schema centroid and a word to be considered domain-related but not synonymous (`sim_max=0.25`).
