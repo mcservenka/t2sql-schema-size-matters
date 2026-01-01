@@ -205,14 +205,14 @@ Llama-3.3-70B Performance across Variants.
       <td>1.40</td>
     </tr>
     <tr>
-      <td></td>
+      <td><strong>Level 1</strong></td>
       <td>spider-dev-50</td>
       <td>76.89</td>
       <td>3,890</td>
       <td>0.96</td>
     </tr>
     <tr>
-      <td></td>
+      <td><strong>Level 1</strong></td>
       <td>spider-dev-100</td>
       <td>74.56</td>
       <td>7,287</td>
@@ -226,14 +226,14 @@ Llama-3.3-70B Performance across Variants.
       <td>2.84</td>
     </tr>
     <tr>
-      <td></td>
+      <td><strong>Level 1</strong></td>
       <td>spider-dev-500</td>
       <td>70.50</td>
       <td>35,119</td>
       <td>3.43</td>
     </tr>
     <tr>
-      <td></td>
+      <td><strong>Level 1</strong></td>
       <td>spider-dev-800</td>
       <td>70.21</td>
       <td>56,472</td>
@@ -247,28 +247,28 @@ Llama-3.3-70B Performance across Variants.
       <td>0.94</td>
     </tr>
     <tr>
-      <td></td>
+      <td><strong>Level 2</strong></td>
       <td>spider-dev-100</td>
       <td>72.92</td>
       <td>6,998</td>
       <td>0.93</td>
     </tr>
     <tr>
-      <td></td>
+      <td><strong>Level 2</strong></td>
       <td>spider-dev-250</td>
       <td>74.66</td>
       <td>16,744</td>
       <td>1.51</td>
     </tr>
     <tr>
-      <td></td>
+      <td><strong>Level 2</strong></td>
       <td>spider-dev-500</td>
       <td>73.50</td>
       <td>33,208</td>
       <td>1.82</td>
     </tr>
     <tr>
-      <td></td>
+      <td><strong>Level 2</strong></td>
       <td>spider-dev-800</td>
       <td>71.86</td>
       <td>52,853</td>
