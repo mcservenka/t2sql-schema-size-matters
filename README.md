@@ -23,7 +23,7 @@ import nltk
 nltk.download("wordnet")
 nltk.download("omw-1.4")
 ```
-Also download Fasttext's English Common Crawl Word Vectors `cc.en.300.bin` from [fasttext.cc](https://fasttext.cc/docs/en/crawl-vectors.html) and put it in the root folder.
+Also download fastText's English Common Crawl Word Vectors `cc.en.300.bin` from [fasttext.cc](https://fasttext.cc/docs/en/crawl-vectors.html) and put it in the root folder.
 
 ## Experiment
 Follow the steps down below to recreate the experiment.
