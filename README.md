@@ -88,9 +88,9 @@ Again make sure the results for the selected variants were generated beforehand.
 Down below we illustrated the official results of our paper. Please note that - although our schema scaler behaves inherently deterministic - the results may vary after rerunning the experiment due to the inherent stochasticity of the LLM. For detailed evaluation results feel free to check out chapter 5 of the paper.
 
 ### General Terminology
-ExA = Execution Accuracy
-TE = Token Efficiency (total tokens consumed by LLM per query)
-LE = Latency Efficiency (runtime in seconds per query)
+* ExA = Execution Accuracy
+* TE = Token Efficiency (total tokens consumed by LLM per query)
+* LE = Latency Efficiency (runtime in seconds per query)
 
 ### Aggregate Analysis
 GPT-5.2 Performance across Variants.
