@@ -276,3 +276,11 @@ Llama-3.3-70B Performance across Variants.
     </tr>
   </tbody>
 </table>
+
+## Citation
+```citation
+@article{schema-size-matters,
+    author  =   {Cservenka Markus},
+    title   =   {Schema Size Matters: Context Pressure and Efficiency in Text-to-SQL},
+    year    =   {2025}
+}
