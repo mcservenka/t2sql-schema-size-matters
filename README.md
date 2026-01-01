@@ -42,7 +42,7 @@ Before generating the enlarged schema variants, we first construct a pool of can
 * **Candidates Maximum** `max_candidates`: The maximum number of candidate words that should be generated for a single database (`max_candidates=1000`).
 * **Anchor k** `anchor_k`: The number of semantically related nouns used for stabilizing the embedding space in case of small schemas with a narrow semantic representation (`anchor_k=30`).
 
-To generate the candidate words in `data/candidates` you can run:
+To generate the candidate words in `data/candidates/` you can run:
 ```
 python generate_names.py \
     --sim_min 0.55 \
@@ -52,3 +52,36 @@ python generate_names.py \
     --max_candidates 1000 \
     --anchor_k 30
 ```
+
+### Schema Scaling
+Next we can start generating the augmented dataset variants of spider-dev. You can determine which specific variant you want to generate by setting `target_size` - which determines the number of tables inserted into the original database - and `apply_level_2` - which decides whether level 1 (default) or level 2 of schema inflation is performed. In level 1 the schema scaler performs pure schema inflation without introducing ambiguity relative to the original schema. In level 2 original-inspired tables and join-competition are introduced as well.
+```
+python enlarge_databases.py \
+    --target_size 100 \
+    --apply_level_2
+```
+The newly created datasets are stored in `data/datasets/` and level 2 variants are marked with an `f` suffix. The schema scaler further generates metadata-files - that provide information about table and foreign key counts before and after augmentation - and stores them in `data/metadata/`. The corresponding JSON-files containing the schema representation are stored in `data/schemas/`.
+
+### Prompt Model
+Now using our augmented versions of spider-dev, we can start prompting the models. In terms of LLMs utilized within this study, one open- (`gpt-5.2` via OpenAI API) and one closed-source (`llama-3.3-70B` via TogetherAI API) LLM were tested, which is common in this field of research. To generate the results in `data/reesults/` run the following command for each variant:
+```
+python prompt_model.py \
+    --model "gpt-5.2" \
+    --db_size 100 \
+    --apply_level_2 \
+    --schema_filter "bm25"
+```
+Make sure that the dataset variant you select really exists in `data/datasets/` and `data/schemas/`, respectively. The `schema_filter` parameter decides whether one of the implemented filtering methods (`bm25`, `dense`) is applied before prompting the model.
+
+### Evaluation
+Eventually, you can evaluate the responses by running `evaluate_results.py`. This will add the evaluation scores to your response objects and create a new file in `data/results/` and print the evaluation results to the console.
+```
+python evaluate_results.py \
+    --model "gpt-5.2" \
+    --db_size 100 \
+    --apply_level_2 \
+    --schema_filter "bm25"
+```
+Again make sure the results for the selected variants were generated beforehand.
+
+## Experiment Results
